@@ -4,6 +4,8 @@ import { Link, graphql } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import { rhythm, scale } from '../utils/typography';
+import Image from 'gatsby-image';
+import * as colors from '../colors.json';
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -44,13 +46,42 @@ class BlogPostTemplate extends React.Component {
             >
               {post.frontmatter.date}
             </small>
+            <Image
+              fluid={post.frontmatter.image.childImageSharp.fluid}
+              alt={'image'}
+              style={{
+                marginBottom: 0,
+                minWidth: `100px`,
+                minHeight: `50vh`,
+              }}
+              imgStyle={{}}
+            />
           </header>
           <section dangerouslySetInnerHTML={{ __html: post.html }} />
-          <hr
-            style={{
-              marginBottom: rhythm(1),
-            }}
-          />
+          <div style={{ textAlign: `center` }}>
+            <a
+              href={post.frontmatter.download}
+              style={{
+                backgroundColor: colors.h1,
+                border: `none`,
+                color: colors.h2,
+                padding: `20px`,
+                textAlign: `center`,
+                align: `center`,
+                textDecoration: `none`,
+                display: `inline-block`,
+                fontSize: `16px`,
+                margin: `10%`,
+                cursor: `pointer`,
+                borderRadius: `8px`,
+              }}
+              download
+            >
+              Download This Mod
+            </a>
+          </div>
+          {` `}
+          <hr />
         </article>
 
         <nav>
@@ -60,7 +91,7 @@ class BlogPostTemplate extends React.Component {
               flexWrap: `wrap`,
               justifyContent: `space-between`,
               listStyle: `none`,
-              margin: `5em`,
+              margin: `10%`,
             }}
           >
             <li>
@@ -101,6 +132,14 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        image {
+          childImageSharp {
+            fluid(quality: 100, maxWidth: 1600) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        download
       }
     }
   }

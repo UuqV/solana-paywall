@@ -5,17 +5,16 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
-import colors from "../colors"
-import { rhythm } from "../utils/typography"
-import LinkedIn from "../../content/assets/icons/linkedin.svg"
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import Image from 'gatsby-image';
+import colors from '../colors';
+import { rhythm } from '../utils/typography';
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
-      avatar: file(absolutePath: { regex: "/profile500x752.jpeg/" }) {
+      avatar: file(absolutePath: { regex: "/profile.jpg/" }) {
         childImageSharp {
           fluid(quality: 100, maxWidth: 1600) {
             src
@@ -36,14 +35,13 @@ const Bio = () => {
         }
       }
     }
-  `)
+  `);
 
-  const { author, social } = data.site.siteMetadata
+  const { author, social } = data.site.siteMetadata;
   return (
     <div
       style={{
         display: `flex`,
-        marginBottom: rhythm(2.5),
         boxShadow: `0px 0px 20px 0px`,
       }}
     >
@@ -52,12 +50,8 @@ const Bio = () => {
         alt={author}
         style={{
           marginBottom: 0,
-          minWidth: `100px`,
           flex: `1 1 40vw`,
-          width: `40vw`,
-          minHeight: `100vh`,
         }}
-        imgStyle={{}}
       />
       <div
         style={{
@@ -72,33 +66,23 @@ const Bio = () => {
         }}
       >
         <h3>
-          Frontend Engineer in NYC. Managing where Art, Science & Craft meet.
+          I'm a software Engineer from NYC.
           {` `}
         </h3>
-        <p>I love graphs whether geospatial, linear, or unembeddable.</p>
+        <p>Started at Sims 1 and here for the renaissance.</p>
         <p>
-          I've built data discovery systems as well as platforms for push
-          content. Looking forward to guiding ever larger scale projects.
-        </p>
-        <h3>
-          Committed to iterative improvement, habitually preparing for the next
-          opportunity.
-        </h3>
-        <span>
-          {" "}
-          <a href={`https://www.linkedin.com/in/${social.linkedin}/`}>
-            <LinkedIn
-              style={{
-                width: `2em`,
-                height: `2em`,
-                fill: colors.h2,
-              }}
+          <a href="https://ko-fi.com/A0A06R4FV" target="_blank">
+            <img
+              style={{ border: `0px` }}
+              src="https://cdn.ko-fi.com/cdn/kofi3.png?v=3"
+              border="0"
+              alt="Buy Me a Coffee at ko-fi.com"
             />
           </a>
-        </span>
+        </p>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Bio
+export default Bio;

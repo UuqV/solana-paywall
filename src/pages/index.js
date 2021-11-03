@@ -5,6 +5,7 @@ import Layout from '../components/layout';
 import Hero from '../components/hero';
 import SEO from '../components/seo';
 import { rhythm } from '../utils/typography';
+import Image from 'gatsby-image';
 
 class BlogIndex extends React.Component {
   render() {
@@ -43,6 +44,16 @@ class BlogIndex extends React.Component {
                     </Link>
                   </h3>
                   <small>{node.frontmatter.date}</small>
+                  <Image
+                    fluid={node.frontmatter.image.childImageSharp.fluid}
+                    alt={'image'}
+                    style={{
+                      marginBottom: 0,
+                      minWidth: `100px`,
+                      minHeight: `50vh`,
+                    }}
+                    imgStyle={{}}
+                  />
                 </header>
                 <section>
                   <p
@@ -79,6 +90,13 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
+            image {
+              childImageSharp {
+                fluid(quality: 100, maxWidth: 800) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }

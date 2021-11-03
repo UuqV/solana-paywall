@@ -1,7 +1,10 @@
 ---
 title: "Enhanced Good vs. Evil Traits"
 date: "2021-09-13"
+image: "good-vs-evil.png"
+download: "uuqv-good-vs-evil-enhanced.zip"
 ---
+
 Experience tells you that Mean is a more fun trait than Evil. No longer! This package makes the Good and Evil Traits more interesting/powerful, adds drawbacks, and enhances the social dynamic between the two factions.
 Contains two separate packages, one for the Good trait and one for the Evil trait. Either can be safely installed independently.
 
