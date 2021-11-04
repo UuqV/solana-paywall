@@ -50,12 +50,6 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: 'gatsby-plugin-sass',
-      options: {
-        indentedSyntax: true,
-      },
-    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

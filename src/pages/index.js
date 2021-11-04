@@ -47,6 +47,7 @@ class BlogIndex extends React.Component {
                   <Image
                     fluid={node.frontmatter.image.childImageSharp.fluid}
                     alt={'image'}
+                    href={node.fields.slug}
                     style={{
                       marginBottom: 0,
                       minWidth: `300px`,
