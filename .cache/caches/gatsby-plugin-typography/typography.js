@@ -1,1 +1,0 @@
-module.exports = require("/Users/UuqV/uuqsims/src/utils/typography")
