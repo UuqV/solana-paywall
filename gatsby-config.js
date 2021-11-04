@@ -2,11 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `UuqSims`,
     author: `uuqv`,
-    description: `Software Engineer from NYC. Started at Sims 1 and here for the renaissance.`,
+    description: `Subtle enhancement mods for The Sims 4`,
     siteUrl: `https://kathrynlovell.tech/`,
-    social: {
-      linkedin: `kathryn-lovell-688845112`,
-    },
   },
   mapping: {
     'MarkdownRemark.frontmatter.download': 'File.base',
@@ -53,7 +50,12 @@ module.exports = {
         },
       },
     },
-    `gatsby-plugin-sass`,
+    {
+      resolve: 'gatsby-plugin-sass',
+      options: {
+        indentedSyntax: true,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
