@@ -2,7 +2,7 @@
 title: "Get Famous from Running Your Restaurant"
 date: "2021-10-07"
 image: "angela-running-restaurant.png"
-download: "uuqv-get-famous-hospitality.package"
+download: "uuqv-get-famous-hospitality.package.zip"
 ---
 
 Did your Sim dramatically quit their catering job, running off with the boss’ clients? Only to have their newfound fame quickly vanish, despite their solo success?

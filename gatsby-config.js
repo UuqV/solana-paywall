@@ -8,6 +8,9 @@ module.exports = {
       linkedin: `kathryn-lovell-688845112`,
     },
   },
+  mapping: {
+    'MarkdownRemark.frontmatter.download': 'File.base',
+  },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,

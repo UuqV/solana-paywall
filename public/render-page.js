@@ -35047,7 +35047,7 @@ class BlogIndex extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
         alt: 'image',
         style: {
           marginBottom: 0,
-          minWidth: `100px`,
+          minWidth: `300px`,
           minHeight: `50vh`
         },
         imgStyle: {}
@@ -35129,9 +35129,7 @@ class BlogPostTemplate extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Comp
       fluid: post.frontmatter.image.childImageSharp.fluid,
       alt: 'image',
       style: {
-        marginBottom: 0,
-        minWidth: `100px`,
-        minHeight: `50vh`
+        marginBottom: 0
       },
       imgStyle: {}
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
@@ -35143,7 +35141,7 @@ class BlogPostTemplate extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Comp
         textAlign: `center`
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-      href: post.frontmatter.download,
+      href: post.frontmatter.download.publicURL,
       style: {
         backgroundColor: _colors_json__WEBPACK_IMPORTED_MODULE_6__["h1"],
         border: `none`,
@@ -35179,7 +35177,7 @@ class BlogPostTemplate extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Comp
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (BlogPostTemplate);
-const pageQuery = "3319501632";
+const pageQuery = "2407490370";
 
 /***/ }),
 

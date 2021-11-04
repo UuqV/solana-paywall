@@ -12,7 +12,6 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.markdownRemark;
     const siteTitle = this.props.data.site.siteMetadata.title;
     const { previous, next } = this.props.pageContext;
-
     return (
       <Layout
         location={this.props.location}
@@ -51,8 +50,6 @@ class BlogPostTemplate extends React.Component {
               alt={'image'}
               style={{
                 marginBottom: 0,
-                minWidth: `100px`,
-                minHeight: `50vh`,
               }}
               imgStyle={{}}
             />
@@ -60,7 +57,7 @@ class BlogPostTemplate extends React.Component {
           <section dangerouslySetInnerHTML={{ __html: post.html }} />
           <div style={{ textAlign: `center` }}>
             <a
-              href={post.frontmatter.download}
+              href={post.frontmatter.download.publicURL}
               style={{
                 backgroundColor: colors.h1,
                 border: `none`,
@@ -139,7 +136,9 @@ export const pageQuery = graphql`
             }
           }
         }
-        download
+        download {
+          publicURL
+        }
       }
     }
   }

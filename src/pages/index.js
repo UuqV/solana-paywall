@@ -49,7 +49,7 @@ class BlogIndex extends React.Component {
                     alt={'image'}
                     style={{
                       marginBottom: 0,
-                      minWidth: `100px`,
+                      minWidth: `300px`,
                       minHeight: `50vh`,
                     }}
                     imgStyle={{}}
