@@ -61,7 +61,7 @@ class BlogPostTemplate extends React.Component {
               href={post.frontmatter.download.publicURL}
               onClick={() => {
                 if (window.gtag) {
-                  return window.gtag('event', 'ModDownload', {
+                  return window.gtag('event', 'mod_download', {
                     mod_name: post.frontmatter.download.publicURL,
                   });
                 }
