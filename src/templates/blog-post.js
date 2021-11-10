@@ -59,6 +59,13 @@ class BlogPostTemplate extends React.Component {
           <div style={{ textAlign: `center` }}>
             <a
               href={post.frontmatter.download.publicURL}
+              onClick={() => {
+                if (window.gtag) {
+                  return window.gtag('event', 'ModDownload', {
+                    mod_name: post.frontmatter.download.publicURL,
+                  });
+                }
+              }}
               style={{
                 backgroundColor: colors.h1,
                 border: `none`,
