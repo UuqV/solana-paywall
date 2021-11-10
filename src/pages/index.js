@@ -25,45 +25,56 @@ class BlogIndex extends React.Component {
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug;
             return (
-              <article
+              <div
                 key={node.fields.slug}
                 style={{
-                  padding: `1em`,
-                  paddingBottom: `0`,
+                  display: `flex`,
                   flex: `1 0 50%`,
                 }}
               >
-                <header>
-                  <h3
-                    style={{
-                      marginBottom: rhythm(1 / 4),
-                    }}
-                  >
-                    <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                      {title}
-                    </Link>
-                  </h3>
-                  <small>{node.frontmatter.date}</small>
-                  <Image
-                    fluid={node.frontmatter.image.childImageSharp.fluid}
-                    alt={'image'}
-                    href={node.fields.slug}
-                    style={{
-                      marginBottom: 0,
-                      minWidth: `300px`,
-                      minHeight: `50vh`,
-                    }}
-                    imgStyle={{}}
-                  />
-                </header>
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: node.excerpt,
-                    }}
-                  />
-                </section>
-              </article>
+                <a
+                  href={node.fields.slug}
+                  style={{
+                    all: `inherit`,
+                    cursor: `pointer`,
+                    margin: `1em`,
+                    marginBottom: `0`,
+                  }}
+                  key={node.fields.slug}
+                >
+                  <article>
+                    <header>
+                      <h3
+                        style={{
+                          marginBottom: rhythm(1 / 4),
+                        }}
+                      >
+                        <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                          {title}
+                        </Link>
+                      </h3>
+                      <small>{node.frontmatter.date}</small>
+                      <Image
+                        fluid={node.frontmatter.image.childImageSharp.fluid}
+                        alt={'image'}
+                        style={{
+                          marginBottom: 0,
+                          minWidth: `300px`,
+                          minHeight: `50vh`,
+                        }}
+                        imgStyle={{}}
+                      />
+                    </header>
+                    <section>
+                      <p
+                        dangerouslySetInnerHTML={{
+                          __html: node.excerpt,
+                        }}
+                      />
+                    </section>
+                  </article>
+                </a>
+              </div>
             );
           })}
         </div>

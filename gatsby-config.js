@@ -2,8 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `UuqSims`,
     author: `uuqv`,
-    description: `Subtle enhancement mods for The Sims 4`,
-    siteUrl: `https://kathrynlovell.tech/`,
+    description: `Download my Sims 4 mods here`,
+    siteUrl: `https://uuqsims.com/`,
   },
   mapping: {
     'MarkdownRemark.frontmatter.download': 'File.base',

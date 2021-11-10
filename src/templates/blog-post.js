@@ -25,6 +25,7 @@ class BlogPostTemplate extends React.Component {
         <article
           style={{
             margin: `10%`,
+            marginBottom: `1%`,
           }}
         >
           <header>
@@ -68,7 +69,7 @@ class BlogPostTemplate extends React.Component {
                 textDecoration: `none`,
                 display: `inline-block`,
                 fontSize: `16px`,
-                margin: `10%`,
+                margin: `5%`,
                 cursor: `pointer`,
                 borderRadius: `8px`,
               }}
@@ -88,7 +89,7 @@ class BlogPostTemplate extends React.Component {
               flexWrap: `wrap`,
               justifyContent: `space-between`,
               listStyle: `none`,
-              margin: `10%`,
+              margin: `2% 10% 2% 10%`,
             }}
           >
             <li>
@@ -124,7 +125,6 @@ export const pageQuery = graphql`
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
-      excerpt(pruneLength: 160)
       html
       frontmatter {
         title

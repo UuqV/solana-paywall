@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 
 import { rhythm, scale } from '../utils/typography';
 import Hero from './hero';
+import * as colors from '../colors.json';
 
 class Layout extends React.Component {
   render() {
@@ -13,7 +14,6 @@ class Layout extends React.Component {
       <>
         <h3
           style={{
-            fontFamily: `Montserrat, sans-serif`,
             padding: rhythm(1 / 4),
           }}
         >
@@ -25,7 +25,7 @@ class Layout extends React.Component {
             }}
             to={`/`}
           >
-            {title}
+            Uuq<span style={{ color: colors.h1, fontSize: `1.2em` }}>Sims</span>
           </Link>
         </h3>
       </>

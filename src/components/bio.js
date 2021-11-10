@@ -57,7 +57,6 @@ const Bio = () => {
           flexDirection: `column`,
           justifyContent: `space-around`,
           padding: `1em`,
-          fontWeight: 300,
           color: colors.h2,
           textAlign: `right`,
         }}

@@ -1,6 +1,7 @@
 import Typography from 'typography';
 import moraga from 'typography-theme-moraga';
 import * as colors from '../colors.json';
+import './typography.css';
 
 moraga.overrideThemeStyles = () => {
   return {
@@ -8,6 +9,7 @@ moraga.overrideThemeStyles = () => {
       boxShadow: `none`,
     },
     'h1,h2,a': {
+      fontFamily: `TheSims`,
       color: colors.h1,
     },
     h3: {
