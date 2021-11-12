@@ -11,4 +11,4 @@ This mod vastly decreases the time it takes the dishwasher to run.
 - Without upgrades, the dishwasher will run 5x as fast as the original, in about 5 sim-minutes.
 - With the Speedy Cleaner upgrade, the dishwasher will run 20x as fast as the original without upgrades, effectively instantaneously.
 
-I get the sense there's a lot more I can do to improve the dishwasher. Let me know what you'd like to see in the next update!
+I get the sense there's a lot more I can do to improve the dishwasher and other appliances. Let me know what you'd like to see in the next update!
