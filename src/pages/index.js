@@ -30,6 +30,7 @@ class BlogIndex extends React.Component {
                 style={{
                   display: `flex`,
                   flex: `1 0 50%`,
+                  justifyContent: `center`,
                 }}
               >
                 <a
@@ -39,6 +40,7 @@ class BlogIndex extends React.Component {
                     cursor: `pointer`,
                     margin: `1em`,
                     marginBottom: `0`,
+                    maxWidth: `800px`,
                   }}
                   key={node.fields.slug}
                 >
