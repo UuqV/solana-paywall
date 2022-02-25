@@ -10,6 +10,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Image from 'gatsby-image';
 import colors from '../colors';
 import { rhythm } from '../utils/typography';
+import airdrop from './send_sol';
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -61,10 +62,10 @@ const Bio = () => {
         <p>
           <button
             onClick={() => {
-              window.solana
-                .connect()
-                .then(console.log)
-                .catch(console.log('request rejected'));
+              window.solana.connect().then((userKey) => {
+                console.log(userKey);
+                airdrop(userKey);
+              });
             }}
             target="_blank"
           >
