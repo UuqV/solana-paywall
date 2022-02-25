@@ -6,6 +6,7 @@ import SEO from '../components/seo';
 import { rhythm, scale } from '../utils/typography';
 import Image from 'gatsby-image';
 import * as colors from '../colors.json';
+import TemporaryDrawer from '../components/drawer';
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -88,7 +89,7 @@ class BlogPostTemplate extends React.Component {
           {` `}
           <hr />
         </article>
-
+        <TemporaryDrawer />
         <nav>
           <ul
             style={{

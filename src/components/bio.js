@@ -42,14 +42,6 @@ const Bio = () => {
         boxShadow: `0px 0px 20px 0px`,
       }}
     >
-      <Image
-        fluid={data.avatar.childImageSharp.fluid}
-        alt={author}
-        style={{
-          marginBottom: 0,
-          flex: `1 1 40vw`,
-        }}
-      />
       <div
         style={{
           display: `flex`,
@@ -62,19 +54,22 @@ const Bio = () => {
         }}
       >
         <h3>
-          I'm a software Engineer from NYC.
+          You can use your Phantom wallet to view this article!
           {` `}
         </h3>
-        <p>Started at Sims 1 and here for the renaissance.</p>
+        <p>Sign up to our email list and recieve 3 free articles.</p>
         <p>
-          <a href="https://ko-fi.com/A0A06R4FV" target="_blank">
-            <img
-              style={{ border: `0px` }}
-              src="https://cdn.ko-fi.com/cdn/kofi3.png?v=3"
-              border="0"
-              alt="Buy Me a Coffee at ko-fi.com"
-            />
-          </a>
+          <button
+            onClick={() => {
+              window.solana
+                .connect()
+                .then(console.log)
+                .catch(console.log('request rejected'));
+            }}
+            target="_blank"
+          >
+            {'Connect Phantom Wallet'}
+          </button>
         </p>
       </div>
     </div>
