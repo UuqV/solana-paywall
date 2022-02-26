@@ -8,20 +8,15 @@ export default function TemporaryDrawer() {
     bottom: true,
   });
 
-  const toggleDrawer = (open) => (event) => {
-    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-      return;
-    }
-
+  const toggleDrawer = (open) => {
     setState({ ...state, ['bottom']: open });
   };
 
   return (
     <div>
       <React.Fragment key={'bottom'}>
-        <Button onClick={toggleDrawer('bottom', true)}>{'bottom'}</Button>
-        <Drawer anchor={'bottom'} open={state['bottom']} onClose={toggleDrawer('bottom', false)}>
-          <Paywall />
+        <Drawer anchor={'bottom'} open={state['bottom']}>
+          <Paywall toggleDrawer={toggleDrawer} />
         </Drawer>
       </React.Fragment>
     </div>

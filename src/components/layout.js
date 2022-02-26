@@ -25,7 +25,7 @@ class Layout extends React.Component {
             }}
             to={`/`}
           >
-            Uuq<span style={{ color: colors.h1, fontSize: `1.2em` }}>Sims</span>
+            Solana<span style={{ color: colors.h1, fontSize: `1.2em` }}>Publish</span>
           </Link>
         </h3>
       </>

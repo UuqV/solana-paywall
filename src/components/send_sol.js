@@ -1,6 +1,6 @@
 import * as web3 from '@solana/web3.js';
 
-var airdrop = (userKey) => {
+var airdrop = (callback, userKey) => {
   // Connect to cluster
   var connection = new web3.Connection(web3.clusterApiUrl('devnet'), 'confirmed');
 
@@ -22,7 +22,7 @@ var airdrop = (userKey) => {
 
     // Sign transaction, broadcast, and confirm
     window.solana.signAndSendTransaction(transaction).then((res) => {
-      connection.confirmTransaction(res.signature).then(console.log);
+      callback();
     });
   });
 };

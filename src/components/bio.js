@@ -7,12 +7,10 @@
 
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import Image from 'gatsby-image';
 import colors from '../colors';
-import { rhythm } from '../utils/typography';
 import airdrop from './send_sol';
 
-const Bio = () => {
+const Bio = (props) => {
   const data = useStaticQuery(graphql`
     query BioQuery {
       avatar: file(absolutePath: { regex: "/profile.jpg/" }) {
@@ -41,6 +39,7 @@ const Bio = () => {
       style={{
         display: `flex`,
         boxShadow: `0px 0px 20px 0px`,
+        background: `rgb(21, 88, 112)`,
       }}
     >
       <div
@@ -55,23 +54,10 @@ const Bio = () => {
         }}
       >
         <h3>
-          You can use your Phantom wallet to view this article!
+          Thanks for your support!
           {` `}
         </h3>
         <p>Sign up to our email list and recieve 3 free articles.</p>
-        <p>
-          <button
-            onClick={() => {
-              window.solana.connect().then((userKey) => {
-                console.log(userKey);
-                airdrop(userKey);
-              });
-            }}
-            target="_blank"
-          >
-            {'Connect Phantom Wallet'}
-          </button>
-        </p>
       </div>
     </div>
   );
