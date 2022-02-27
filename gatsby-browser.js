@@ -1,3 +1,9 @@
 // custom typefaces
-import "typeface-montserrat"
-import "typeface-merriweather"
+import 'typeface-montserrat';
+import 'typeface-merriweather';
+
+const shouldUpdateScroll = () => {
+  return false;
+};
+
+export { shouldUpdateScroll };

@@ -8,7 +8,8 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import colors from '../colors';
-import airdrop from './send_sol';
+import payWithSol from './send_sol';
+import { Button } from '@mui/material';
 
 const Paywall = (props) => {
   const data = useStaticQuery(graphql`
@@ -49,26 +50,24 @@ const Paywall = (props) => {
           justifyContent: `space-around`,
           padding: `1em`,
           color: colors.h2,
-          textAlign: `right`,
+          textAlign: `center`,
         }}
       >
         <h3>
           You can use your Phantom wallet to view this article!
           {` `}
         </h3>
-        <p>Sign up to our email list and recieve 3 free articles.</p>
+        <p></p>
         <p>
-          <button
-            onClick={function() {
-              console.log(props.toggleDrawer);
-              window.solana.connect().then(function(userKey) {
-                airdrop(props.toggleDrawer, userKey);
-              });
+          <Button
+            variant="contained"
+            color="secondary"
+            onClick={() => {
+              payWithSol(props.toggleDrawer);
             }}
-            target="_blank"
           >
-            {'Connect Phantom Wallet'}
-          </button>
+            Buy with Phantom Wallet
+          </Button>
         </p>
       </div>
     </div>
