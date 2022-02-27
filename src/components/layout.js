@@ -12,7 +12,7 @@ class Layout extends React.Component {
     const rootPath = `${__PATH_PREFIX__}/`;
     let header;
     header = (
-      <div>
+      <div style={{ position: 'relative', boxShadow: '0px 0px 20px 0px' }}>
         <h3
           style={{
             padding: rhythm(1 / 4),

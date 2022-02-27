@@ -33,7 +33,6 @@ const Paywall = (props) => {
     }
   `);
 
-  const { author, social } = data.site.siteMetadata;
   return (
     <div
       style={{
