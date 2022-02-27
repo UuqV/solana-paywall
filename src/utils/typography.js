@@ -9,7 +9,6 @@ moraga.overrideThemeStyles = () => {
       boxShadow: `none`,
     },
     'h1,h2,a': {
-      fontFamily: `TheSims`,
       color: colors.h1,
     },
     h3: {
@@ -18,13 +17,6 @@ moraga.overrideThemeStyles = () => {
     blockquote: {
       background: colors.h1,
       color: colors.h2,
-    },
-    pre: {
-      background: colors.h1,
-      color: colors.h2,
-      borderLeft: '0.39rem solid hsla(0,0%,0%,0.13)',
-      paddingLeft: '0.39rem',
-      overflow: 'scroll',
     },
     'small,li>a': {
       color: colors.small,

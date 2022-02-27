@@ -15,6 +15,7 @@ class BlogIndex extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle} post={posts[0].node}>
+        <Hero />
         <div
           style={{
             display: `flex`,
@@ -97,7 +98,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
-          excerpt
+          excerpt(pruneLength: 33)
           fields {
             slug
           }

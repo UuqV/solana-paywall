@@ -8,7 +8,6 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import colors from '../colors';
-import airdrop from './send_sol';
 
 const Bio = (props) => {
   const data = useStaticQuery(graphql`

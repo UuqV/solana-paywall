@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 
 import { rhythm, scale } from '../utils/typography';
 import Hero from './hero';
+import Bio from './bio';
 import * as colors from '../colors.json';
 
 class Layout extends React.Component {
@@ -11,7 +12,7 @@ class Layout extends React.Component {
     const rootPath = `${__PATH_PREFIX__}/`;
     let header;
     header = (
-      <>
+      <div>
         <h3
           style={{
             padding: rhythm(1 / 4),
@@ -28,7 +29,7 @@ class Layout extends React.Component {
             Solana<span style={{ color: colors.h1, fontSize: `1.2em` }}>Publish</span>
           </Link>
         </h3>
-      </>
+      </div>
     );
     return (
       <div
@@ -39,7 +40,7 @@ class Layout extends React.Component {
       >
         <header>{header}</header>
         <main>{children}</main>
-        <Hero />
+        <Bio />
       </div>
     );
   }
