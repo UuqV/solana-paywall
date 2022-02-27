@@ -15,7 +15,7 @@ export default function TemporaryDrawer() {
   return (
     <div>
       <React.Fragment key={'bottom'}>
-        <Drawer anchor={'bottom'} open={state['bottom']}>
+        <Drawer style={{ top: '48.3px' }} anchor={'bottom'} open={state['bottom']}>
           <Paywall toggleDrawer={toggleDrawer} />
         </Drawer>
       </React.Fragment>
