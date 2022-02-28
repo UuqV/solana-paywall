@@ -6,7 +6,7 @@ const payWithSol = (callback) => {
     var connection = new web3.Connection(web3.clusterApiUrl('devnet'), 'confirmed');
 
     var web3userKey = new web3.PublicKey(userKey.publicKey);
-    var web3reciever = new web3.PublicKey('GAuynWz67hbYowUwuXT4AyTDXNbjGktgivZoHpdYcb2H');
+    var web3reciever = new web3.PublicKey(process.env.GATSBY_PUBLISHER_URL);
 
     // Add transfer instruction to transaction
     connection.getLatestBlockhash().then((blockhashObj) => {
