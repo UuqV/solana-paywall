@@ -17,7 +17,7 @@ const payWithSol = (callback) => {
         web3.SystemProgram.transfer({
           fromPubkey: web3userKey,
           toPubkey: web3reciever,
-          lamports: web3.LAMPORTS_PER_SOL / 100,
+          lamports: web3.LAMPORTS_PER_SOL / 1000,
         }),
       );
 
