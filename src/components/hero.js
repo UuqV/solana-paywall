@@ -23,7 +23,7 @@ class Hero extends React.Component {
           }}
         >
           <h3>
-            The next generation of publishing is here.
+            Get creatives paid.
             {` `}
           </h3>
           <p>

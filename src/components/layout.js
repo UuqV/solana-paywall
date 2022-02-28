@@ -39,6 +39,46 @@ class Layout extends React.Component {
         }}
       >
         <header>{header}</header>
+        <div
+          style={{
+            height: `80vh`,
+            display: `flex`,
+            justifyContent: `space-between`,
+            flexFlow: `row wrap`,
+          }}
+        >
+          <div
+            style={{
+              paddingTop: `10%`,
+              flex: `1 0 60%`,
+            }}
+          >
+            <h1
+              style={{
+                ...scale(1.75),
+                padding: rhythm(1 / 4),
+              }}
+            >
+              <Link
+                style={{
+                  boxShadow: `none`,
+                  textDecoration: `none`,
+                  color: `inherit`,
+                }}
+                to={`/`}
+              >
+                Get creatives paid.
+              </Link>
+            </h1>
+            <h2
+              style={{
+                padding: rhythm(1 / 4),
+              }}
+            >
+              Use solana to accept payments for your content. No subscription required.
+            </h2>
+          </div>
+        </div>
         <main>{children}</main>
         <Bio />
       </div>
