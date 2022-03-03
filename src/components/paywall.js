@@ -68,6 +68,7 @@ const Paywall = (props) => {
             Buy with Phantom Wallet
           </Button>
         </p>
+        <a href="/">Back to Overview</a>
       </div>
     </div>
   );
