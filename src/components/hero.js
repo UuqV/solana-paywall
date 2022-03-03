@@ -8,7 +8,7 @@ class Hero extends React.Component {
         style={{
           display: `flex`,
           boxShadow: `0px 0px 20px 0px`,
-          background: `rgb(21, 88, 112)`,
+          background: colors.background,
         }}
       >
         <div
@@ -18,17 +18,20 @@ class Hero extends React.Component {
             flexDirection: `column`,
             justifyContent: `space-around`,
             padding: `1em`,
-            color: colors.h2,
             textAlign: `right`,
           }}
         >
-          <h3>
-            Get creatives paid.
-            {` `}
-          </h3>
-          <p>
-            Use solana to accept payments for articles like a newstand. No subscription required.
-          </p>
+          <h3>Publish your work with solana and you can:</h3>
+          <li>Capture revenue when articles are shared with friends.</li>
+          <li>Respect user privacy.</li>
+
+          <h3>For publishers:</h3>
+          <li>Improve user conversion!</li>
+          <li>Capture a new market segment!</li>
+
+          <h3>For consumers:</h3>
+          <li>Save money!</li>
+          <li>Protect your privacy! Save </li>
         </div>
       </div>
     );

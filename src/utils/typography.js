@@ -9,17 +9,21 @@ moraga.overrideThemeStyles = () => {
       boxShadow: `none`,
     },
     'h1,h2,a': {
-      color: colors.h1,
+      color: colors.greenText,
+      marginBottom: 'inherit',
     },
     h3: {
-      color: colors.h2,
+      color: colors.greenText,
     },
     blockquote: {
-      background: colors.h1,
-      color: colors.h2,
+      background: colors.greenText,
     },
     'small,li>a': {
       color: colors.small,
+    },
+    li: {
+      color: colors.greenText,
+      marginBottom: 'inherit',
     },
     hr: {
       background: colors.small,
@@ -35,5 +39,3 @@ if (process.env.NODE_ENV !== `production`) {
 }
 
 export default typography;
-export const rhythm = typography.rhythm;
-export const scale = typography.scale;

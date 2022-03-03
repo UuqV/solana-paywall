@@ -3,7 +3,6 @@ import { Link, graphql } from 'gatsby';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import { rhythm, scale } from '../utils/typography';
 import Image from 'gatsby-image';
 import * as colors from '../colors.json';
 import TemporaryDrawer from '../components/drawer';
@@ -32,7 +31,6 @@ class BlogPostTemplate extends React.Component {
           <header>
             <h1
               style={{
-                marginTop: rhythm(1),
                 marginBottom: 0,
               }}
             >
@@ -40,9 +38,7 @@ class BlogPostTemplate extends React.Component {
             </h1>
             <small
               style={{
-                ...scale(-1 / 5),
                 display: `block`,
-                marginBottom: rhythm(1),
               }}
             >
               {post.frontmatter.date}
@@ -68,9 +64,8 @@ class BlogPostTemplate extends React.Component {
                 }
               }}
               style={{
-                backgroundColor: colors.h1,
+                backgroundColor: colors.greenText,
                 border: `none`,
-                color: colors.h2,
                 padding: `20px`,
                 textAlign: `center`,
                 align: `center`,

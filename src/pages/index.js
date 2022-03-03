@@ -4,7 +4,6 @@ import { Link, graphql } from 'gatsby';
 import Layout from '../components/layout';
 import Hero from '../components/hero';
 import SEO from '../components/seo';
-import { rhythm } from '../utils/typography';
 import Image from 'gatsby-image';
 
 class BlogIndex extends React.Component {
@@ -15,6 +14,35 @@ class BlogIndex extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle} post={posts[0].node}>
+        <div
+          style={{
+            height: `80vh`,
+            display: `flex`,
+            justifyContent: `space-between`,
+            flexFlow: `row wrap`,
+          }}
+        >
+          <div
+            style={{
+              paddingTop: `10%`,
+              flex: `1 0 60%`,
+            }}
+          >
+            <h1>
+              <Link
+                style={{
+                  boxShadow: `none`,
+                  textDecoration: `none`,
+                  color: `inherit`,
+                }}
+                to={`/`}
+              >
+                Get creatives paid.
+              </Link>
+            </h1>
+            <h2>Use solana to accept payments for your content. No subscription required.</h2>
+          </div>
+        </div>
         <Hero />
         <div
           style={{
@@ -47,11 +75,7 @@ class BlogIndex extends React.Component {
                 >
                   <article>
                     <header>
-                      <h3
-                        style={{
-                          marginBottom: rhythm(1 / 4),
-                        }}
-                      >
+                      <h3>
                         <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
                           {title}
                         </Link>

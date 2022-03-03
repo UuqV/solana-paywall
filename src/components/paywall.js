@@ -39,7 +39,7 @@ const Paywall = (props) => {
       style={{
         display: `flex`,
         boxShadow: `0px 0px 20px 0px`,
-        background: `rgb(21, 88, 112)`,
+        background: colors.background,
       }}
     >
       <div
@@ -49,7 +49,6 @@ const Paywall = (props) => {
           flexDirection: `column`,
           justifyContent: `space-around`,
           padding: `1em`,
-          color: colors.h2,
           textAlign: `center`,
         }}
       >
