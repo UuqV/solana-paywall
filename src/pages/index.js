@@ -34,7 +34,7 @@ class BlogIndex extends React.Component {
                   boxShadow: `none`,
                   textDecoration: `none`,
                   color: `inherit`,
-                  fontSize: `3em`,
+                  fontSize: `200%`,
                 }}
                 to={`/`}
               >

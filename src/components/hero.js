@@ -18,20 +18,32 @@ class Hero extends React.Component {
             flexDirection: `column`,
             justifyContent: `space-around`,
             padding: `1em`,
-            textAlign: `right`,
           }}
         >
-          <h3>Publish your work with solana and you can:</h3>
-          <li>Capture revenue when articles are shared with friends.</li>
-          <li>Respect user privacy.</li>
-
-          <h3>For publishers:</h3>
-          <li>Improve user conversion!</li>
-          <li>Capture a new market segment!</li>
-
-          <h3>For consumers:</h3>
-          <li>Save money!</li>
-          <li>Protect your privacy! Save </li>
+          <div style={{
+            display: `flex`,
+            flexDirection: `row`,
+            justifyContent: `space-around`,
+          }}>
+            <div style={{
+              padding: `.5em`,
+            }}>
+              <h1 style={{
+                margin: 0,
+              }}>Publishers:</h1>
+              <h3>Improve User Conversion</h3><span>Don't create friction with a subscription process. Every reader can add revenue.</span>
+              <h3>Make Sharing Profitable</h3><span>Traffic as readers share with their friends means visitors bring in profit too.</span>
+            </div>
+            <div style={{
+              padding: `.5em`,
+            }}>
+              <h1 style={{
+                margin: 0,
+              }}>Customers:</h1>
+              <h3>Save Money</h3><span>Only pay for what you use. Skip cancelling subscriptions you don't.</span>
+              <h3>Protect your Privacy</h3><span>Every service out there has your email address. That doesn't have to be the case.</span>
+            </div>
+          </div>
         </div>
       </div>
     );

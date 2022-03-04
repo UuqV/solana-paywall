@@ -33,6 +33,9 @@ moraga.overrideThemeStyles = () => {
       color: colors.greenText,
       marginBottom: 'inherit',
     },
+    span: {
+      color: colors.greenText,
+    },
     hr: {
       background: colors.small,
     },
