@@ -1,12 +1,19 @@
 import * as web3 from '@solana/web3.js';
 
-const payWithSol = (callback) => {
-  window.solana.connect().then(function(userKey) {
+// callback: The function to call after the transaction is signed.
+// This closes our paywall.
+// milliLamports: The price to charge the user in "milli-lamports" (.001 SOL),
+// approximately 10 cents (for now)
+// reciever: The public key of the wallet to send payment to.
+// Should be passed as an environment variable wherever your site's deployed.
+
+const payWithSol = (callback, milliLamports, reciever) => {
+  window.solana.connect().then(function (userKey) {
     // Connect to cluster
     var connection = new web3.Connection(web3.clusterApiUrl('devnet'), 'confirmed');
 
     var web3userKey = new web3.PublicKey(userKey.publicKey);
-    var web3reciever = new web3.PublicKey(process.env.GATSBY_PUBLISHER_URL);
+    var web3reciever = new web3.PublicKey(reciever);
 
     // Add transfer instruction to transaction
     connection.getLatestBlockhash().then((blockhashObj) => {
@@ -17,7 +24,7 @@ const payWithSol = (callback) => {
         web3.SystemProgram.transfer({
           fromPubkey: web3userKey,
           toPubkey: web3reciever,
-          lamports: web3.LAMPORTS_PER_SOL / 1000,
+          lamports: web3.LAMPORTS_PER_SOL * .001 * milliLamports,
         }),
       );
 

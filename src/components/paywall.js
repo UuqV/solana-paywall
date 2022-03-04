@@ -62,7 +62,7 @@ const Paywall = (props) => {
             variant="contained"
             color="secondary"
             onClick={() => {
-              payWithSol(props.toggleDrawer);
+              payWithSol(props.toggleDrawer, 1, process.env.GATSBY_PUBLISHER_URL);
             }}
           >
             Buy with Phantom Wallet
