@@ -16,6 +16,9 @@ moraga.overrideThemeStyles = () => {
     a: {
       color: colors.greenText,
     },
+    'a:hover': {
+      color: 'white',
+    },
     h3: {
       color: colors.greenText,
       marginBottom: 'inherit',

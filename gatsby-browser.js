@@ -2,8 +2,8 @@
 import 'typeface-montserrat';
 import 'typeface-merriweather';
 
-const shouldUpdateScroll = () => {
-  return false;
+const onInitialClientRender = () => {
+  window.scrollTo(0, 0);
 };
 
-export { shouldUpdateScroll };
+export { onInitialClientRender };
