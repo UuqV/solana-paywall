@@ -4,7 +4,7 @@ import { Link, graphql } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Image from 'gatsby-image';
-import TemporaryDrawer from '../components/drawer';
+import { Paywall } from 'solana-publish';
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -54,7 +54,7 @@ class BlogPostTemplate extends React.Component {
           <section dangerouslySetInnerHTML={{ __html: post.html }} />
           <hr />
         </article>
-        <TemporaryDrawer />
+        <Paywall reciever={process.env.GATSBY_PUBLISHER_URL} />
         <nav>
           <ul
             style={{

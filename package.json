@@ -9,7 +9,6 @@
     "@emotion/styled": "^11.8.1",
     "@mui/material": "^5.4.2",
     "@solana/web3.js": "^1.35.1",
-    "bs58": "^5.0.0",
     "gatsby": "^2.13.63",
     "gatsby-image": "^2.2.8",
     "gatsby-plugin-catch-links": "^4.1.0",
@@ -35,36 +34,31 @@
     "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1",
     "react-typography": "^0.16.19",
+    "solana-publish": "github:UuqV/solana-publish-module",
     "typeface-merriweather": "0.0.72",
     "typeface-montserrat": "0.0.75",
     "typography": "^0.16.19",
-    "typography-theme-elk-glen": "^0.16.19",
-    "typography-theme-fairy-gates": "^0.16.19",
-    "typography-theme-grand-view": "^0.16.19",
-    "typography-theme-irving": "^0.16.19",
-    "typography-theme-lawton": "^0.16.19",
-    "typography-theme-moraga": "^0.16.19",
-    "typography-theme-wordpress-2016": "^0.16.19"
+    "typography-theme-moraga": "^0.16.19"
   },
   "devDependencies": {
     "prettier": "^1.18.2"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "solana"
   ],
   "license": "MIT",
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/UuqV/solana-paywall-demo"
   },
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "serve": "gatsby serve"
   }
 }
