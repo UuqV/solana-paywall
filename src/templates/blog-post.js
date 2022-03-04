@@ -4,7 +4,6 @@ import { Link, graphql } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Image from 'gatsby-image';
-import * as colors from '../colors.json';
 import TemporaryDrawer from '../components/drawer';
 
 class BlogPostTemplate extends React.Component {
@@ -53,35 +52,6 @@ class BlogPostTemplate extends React.Component {
             />
           </header>
           <section dangerouslySetInnerHTML={{ __html: post.html }} />
-          <div style={{ textAlign: `center` }}>
-            <a
-              href={post.frontmatter.download.publicURL}
-              onClick={() => {
-                if (window.gtag) {
-                  return window.gtag('event', 'mod_download', {
-                    mod_name: post.frontmatter.download.publicURL,
-                  });
-                }
-              }}
-              style={{
-                backgroundColor: colors.greenText,
-                border: `none`,
-                padding: `20px`,
-                textAlign: `center`,
-                align: `center`,
-                textDecoration: `none`,
-                display: `inline-block`,
-                fontSize: `16px`,
-                margin: `5%`,
-                cursor: `pointer`,
-                borderRadius: `8px`,
-              }}
-              download
-            >
-              Download This Mod
-            </a>
-          </div>
-          {` `}
           <hr />
         </article>
         <TemporaryDrawer />
@@ -138,9 +108,6 @@ export const pageQuery = graphql`
               ...GatsbyImageSharpFluid
             }
           }
-        }
-        download {
-          publicURL
         }
       }
     }

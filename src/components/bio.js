@@ -48,7 +48,7 @@ const Bio = (props) => {
           flexDirection: `column`,
           justifyContent: `space-around`,
           padding: `1em`,
-          color: colors.background,
+          color: colors.greenText,
           textAlign: `right`,
         }}
       >
@@ -56,7 +56,7 @@ const Bio = (props) => {
           Thanks for your support!
           {` `}
         </h3>
-        <p>Sign up to our email list and recieve 3 free articles.</p>
+        <p>Be sure to vote for this project for Solana Riptide!</p>
       </div>
     </div>
   );
