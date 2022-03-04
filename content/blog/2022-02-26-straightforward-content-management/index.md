@@ -1,7 +1,7 @@
 ---
 title: "Straightforward Content Management"
 date: "2022-02-26"
-image: "door-number-1.jpeg"
+image: "straightforward-content-management.png"
 ---
 
 Did you know most Content Management Systems boil down to markdown editors? 

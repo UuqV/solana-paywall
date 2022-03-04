@@ -30,7 +30,7 @@ class BlogPostTemplate extends React.Component {
           <header>
             <h1
               style={{
-                marginBottom: 0,
+                marginLeft: 0,
               }}
             >
               {post.frontmatter.title}
@@ -104,7 +104,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         image {
           childImageSharp {
-            fluid(quality: 70, maxWidth: 800) {
+            fluid(quality: 70) {
               ...GatsbyImageSharpFluid
             }
           }

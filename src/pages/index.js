@@ -70,13 +70,12 @@ class BlogIndex extends React.Component {
                     cursor: `pointer`,
                     margin: `1em`,
                     marginBottom: `0`,
-                    maxWidth: `800px`,
                   }}
                   key={node.fields.slug}
                 >
                   <article>
                     <header>
-                      <h3>
+                      <h3 style={{ fontSize: `2em` }}>
                         <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
                           {title}
                         </Link>
@@ -123,7 +122,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
-          excerpt(pruneLength: 33)
+          excerpt
           fields {
             slug
           }
@@ -132,7 +131,7 @@ export const pageQuery = graphql`
             title
             image {
               childImageSharp {
-                fluid(quality: 100, maxWidth: 800) {
+                fluid(quality: 70) {
                   ...GatsbyImageSharpFluid
                 }
               }

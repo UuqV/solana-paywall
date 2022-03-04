@@ -10,18 +10,19 @@ class Layout extends React.Component {
     let header;
     header = (
       <div style={{ position: 'relative', boxShadow: '0px 0px 20px 0px' }}>
-        <h3>
+        <h2>
           <Link
             style={{
               boxShadow: `none`,
               textDecoration: `none`,
-              color: `inherit`,
+              color: `white`,
+              fontSize: `1.2em`,
             }}
             to={`/`}
           >
-            Solana<span style={{ color: colors.greenText, fontSize: `1.2em` }}>Publish</span>
+            Solana<span style={{ color: colors.greenText, fontSize: `1.8em` }}>Publish</span>
           </Link>
-        </h3>
+        </h2>
       </div>
     );
     return (

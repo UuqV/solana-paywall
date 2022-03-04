@@ -8,12 +8,17 @@ moraga.overrideThemeStyles = () => {
     'a.gatsby-resp-image-link': {
       boxShadow: `none`,
     },
-    'h1,h2,a': {
+    'h1,h2': {
       color: colors.greenText,
       marginBottom: 'inherit',
+      marginLeft: '.5em',
+    },
+    a: {
+      color: colors.greenText,
     },
     h3: {
       color: colors.greenText,
+      marginBottom: 'inherit',
     },
     blockquote: {
       background: colors.greenText,
@@ -34,7 +39,8 @@ moraga.overrideThemeStyles = () => {
 const typography = new Typography(moraga);
 
 // Hot reload typography in development.
-if (process.env.NODE_ENV !== `production`) {
+if (process.env.NODE_ENV !== `production`)
+{
   typography.injectStyles();
 }
 
