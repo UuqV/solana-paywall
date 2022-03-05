@@ -45,7 +45,7 @@ class Hero extends React.Component {
                 margin: 0,
               }}>Customers:</h1>
               <h3>Save Money</h3><p>Only pay for what you use. Skip cancelling subscriptions you don't.</p>
-              <h3>Protect your Privacy</h3><p>Every service out there has your email address. That doesn't have to be the case.</p>
+              <h3>Protect your Privacy</h3><p>Every service out there knows everything there is to know about you. That doesn't have to be the case.</p>
             </div>
           </div>
         </div>
