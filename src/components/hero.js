@@ -25,9 +25,11 @@ class Hero extends React.Component {
             flexDirection: `row`,
             justifyContent: `space-around`,
             color: colors.greenText,
+            flexFlow: `row wrap`,
           }}>
             <div style={{
               padding: `.5em`,
+              flex: `1`,
             }}>
               <h1 style={{
                 margin: 0,
@@ -37,6 +39,7 @@ class Hero extends React.Component {
             </div>
             <div style={{
               padding: `.5em`,
+              flex: `1`,
             }}>
               <h1 style={{
                 margin: 0,
