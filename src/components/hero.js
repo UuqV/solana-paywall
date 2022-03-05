@@ -24,6 +24,7 @@ class Hero extends React.Component {
             display: `flex`,
             flexDirection: `row`,
             justifyContent: `space-around`,
+            color: colors.greenText,
           }}>
             <div style={{
               padding: `.5em`,
@@ -31,8 +32,8 @@ class Hero extends React.Component {
               <h1 style={{
                 margin: 0,
               }}>Publishers:</h1>
-              <h3>Improve User Conversion</h3><span>Don't create friction with a subscription process. Every reader can add revenue.</span>
-              <h3>Make Sharing Profitable</h3><span>Traffic as readers share with their friends means visitors bring in profit too.</span>
+              <h3>Improve User Conversion</h3><p>Don't create friction with a subscription process. Every reader can add revenue.</p>
+              <h3>Make Sharing Profitable</h3><p>Traffic as readers share with their friends means visitors bring in profit too.</p>
             </div>
             <div style={{
               padding: `.5em`,
@@ -40,8 +41,8 @@ class Hero extends React.Component {
               <h1 style={{
                 margin: 0,
               }}>Customers:</h1>
-              <h3>Save Money</h3><span>Only pay for what you use. Skip cancelling subscriptions you don't.</span>
-              <h3>Protect your Privacy</h3><span>Every service out there has your email address. That doesn't have to be the case.</span>
+              <h3>Save Money</h3><p>Only pay for what you use. Skip cancelling subscriptions you don't.</p>
+              <h3>Protect your Privacy</h3><p>Every service out there has your email address. That doesn't have to be the case.</p>
             </div>
           </div>
         </div>
