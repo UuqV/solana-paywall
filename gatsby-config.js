@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `UuqSims`,
-    author: `uuqv`,
-    description: `Download my Sims 4 mods here`,
+    title: `Solana Publish`,
+    author: `Kathryn Lovell`,
+    description: `Get creatives paid with Solana.`,
     siteUrl: `https://uuqsims.com/`,
   },
   mapping: {
