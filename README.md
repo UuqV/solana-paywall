@@ -2,7 +2,9 @@
 
 To use this site to accept payments to your solana wallet, put your public key in an environment variable `process.env.GATSBY_PUBLISHER_URL` wherever you're deploying your site.
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+The rest of this README is about the gatsby blog itself. Happy Hacking!
+
+_Be sure to vote for this project for [solana riptide]()._
 
 ## 🚀 Quick start
 
