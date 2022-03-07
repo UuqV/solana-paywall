@@ -1,13 +1,3 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's blog starter + Solana Publish
-</h1>
-
 > Kick off your project with this blog boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast > > with the blazing fast app generator for React.
 
 To use this site to accept payments to your solana wallet, put your public key in an environment variable `process.env.GATSBY_PUBLISHER_URL` wherever you're deploying your site.
