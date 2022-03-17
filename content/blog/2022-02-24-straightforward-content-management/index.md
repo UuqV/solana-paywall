@@ -1,6 +1,6 @@
 ---
 title: "Straightforward Content Management"
-date: "2022-02-26"
+date: "2022-02-24"
 image: "straightforward-content-management.png"
 ---
 
